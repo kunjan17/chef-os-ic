@@ -1,13 +1,12 @@
-#
-# Cookbook Name:: centos-cloud
+
 # Recipe:: neutron
 
-include_recipe "centos_cloud::common"
-include_recipe "centos_cloud::mysql"
-include_recipe "centos_cloud::opendaylight"
-include_recipe "centos_cloud::openvswitch"
+include_recipe "::common"
+include_recipe "::mysql"
+include_recipe "::opendaylight"
+include_recipe "::openvswitch"
 
-centos_cloud_database "neutron" do
+  database "neutron" do
   password node[:creds][:mysql_password]
 end
 
