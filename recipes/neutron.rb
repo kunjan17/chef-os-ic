@@ -1,8 +1,6 @@
 
 # Recipe:: neutron
 
-include_recipe "::common"
-include_recipe "::mysql"
 include_recipe "::opendaylight"
 include_recipe "::openvswitch"
 
